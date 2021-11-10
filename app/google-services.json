@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "485922377668",
+    "project_id": "fir-app-2117a",
+    "storage_bucket": "fir-app-2117a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485922377668:android:bc67facac835d48e96de91",
+        "android_client_info": {
+          "package_name": "com.hellokh.sovary.firebaseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "485922377668-hhshfuo9uj4ovgn0cmh2419acm7q0ud6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLlKzcfq5fLo_mG4K_0rBX2lNfLTrOGzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "485922377668-hhshfuo9uj4ovgn0cmh2419acm7q0ud6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
