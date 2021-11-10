@@ -78,8 +78,8 @@ public class LoginActivity extends AppCompatActivity {
 
                     Toast.makeText(LoginActivity.this, "You are logged in now", Toast.LENGTH_LONG).show();
 
-                    startActivity(new Intent(LoginActivity.this, UserProfileActivity.class));
-                    finish();
+                    /*startActivity(new Intent(LoginActivity.this, UserProfileActivity.class));
+                    finish();*/
 
                 } else {
                     try {

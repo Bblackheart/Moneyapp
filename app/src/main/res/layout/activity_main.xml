@@ -45,13 +45,22 @@
             android:text="Login" />
 
         <Button
+            android:id="@+id/button_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button_register"
-            android:text="Register"
             android:layout_below="@+id/button_login"
             android:layout_marginLeft="70dp"
-            android:layout_marginRight="70dp"/>
+            android:layout_marginRight="70dp"
+            android:text="Register" />
+
+        <Button
+            android:id="@+id/button_firstpage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_register"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="Go To FirstPage" />
         
         
     </RelativeLayout>
