@@ -25,8 +25,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="310dp"
                 android:layout_marginTop="60dp"
-                android:layout_marginLeft="300dp"
                 android:text="login" />
 
         </RelativeLayout>
