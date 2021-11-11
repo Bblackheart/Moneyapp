@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Open First Activity
-        Button buttonFirstPage = findViewById(R.id.button_firstpage);
-        buttonFirstPage.setOnClickListener(new View.OnClickListener() {
+        Button button_firstpage = findViewById(R.id.button_firstpage);
+        button_firstpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, FirstActivity.class);

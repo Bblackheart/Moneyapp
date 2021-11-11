@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Firebaseapp">
         <activity
+            android:name=".RevenueActivity"
+            android:exported="true" />
+        <activity
+            android:name=".expensesActivity"
+            android:exported="true" />
+        <activity
             android:name=".Page4"
             android:exported="true" />
         <activity

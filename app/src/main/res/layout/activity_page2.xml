@@ -80,8 +80,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textview1_result"
         android:layout_marginLeft="30dp"
-        android:layout_toRightOf="@id/button_add"
         android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/button_add"
         android:text="clear" />
 
     <Button
