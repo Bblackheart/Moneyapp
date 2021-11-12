@@ -14,6 +14,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:text="Exqenses"
+            android:textSize="50dp" />
+
         <EditText
             android:id="@+id/edittext_number_1"
             android:layout_width="match_parent"
