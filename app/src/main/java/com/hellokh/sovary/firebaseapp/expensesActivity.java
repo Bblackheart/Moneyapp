@@ -18,7 +18,7 @@ public class expensesActivity extends AppCompatActivity {
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RevenueActivity.this, FirstActivity.class);
+                Intent intent = new Intent(expensesActivity.this, FirstActivity.class);
                 startActivity(intent);
             }
         });
