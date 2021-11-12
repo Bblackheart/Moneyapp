@@ -58,5 +58,23 @@ public class FirstActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button revenueAcivity = findViewById(R.id.revenuebtn);
+        revenueAcivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(FirstActivity.this ,RevenueActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button expensesAcivity = findViewById(R.id.expensesbtn);
+        expensesAcivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(FirstActivity.this ,expensesActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
