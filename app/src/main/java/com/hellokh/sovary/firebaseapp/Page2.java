@@ -8,12 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-class page2 extends AppCompatActivity {
+public class Page2 extends AppCompatActivity {
     EditText getmEditText1;
     EditText getmEditText2;
     private EditText mEditText1;
@@ -88,7 +84,7 @@ class page2 extends AppCompatActivity {
         page2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(page2.this, page2.class);
+                Intent i = new Intent(Page2.this, Page2.class);
                 startActivity(i);
             }
         });
@@ -97,7 +93,7 @@ class page2 extends AppCompatActivity {
         page3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(page2.this, page3.class);
+                Intent i = new Intent(Page2.this, Page3.class);
                 startActivity(i);
             }
         });
@@ -106,7 +102,7 @@ class page2 extends AppCompatActivity {
         page4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(page2.this, page4.class);
+                Intent i = new Intent(Page2.this, Page4.class);
                 startActivity(i);
             }
         });
@@ -115,7 +111,7 @@ class page2 extends AppCompatActivity {
         page1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(page2.this, FirstActivity.class);
+                Intent i = new Intent(Page2.this, DashActivity.class);
                 startActivity(i);
             }
         });

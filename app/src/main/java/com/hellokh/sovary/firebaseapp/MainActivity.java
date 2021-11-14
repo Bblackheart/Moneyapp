@@ -9,6 +9,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Open First Activity
-        Button buttonfirstpage = findViewById(R.id.button_firstpage);
-        buttonfirstpage.setOnClickListener(new View.OnClickListener() {
+        Button buttonDashActivity = findViewById(R.id.button_dashpage);
+        buttonDashActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FirstActivity.class);
+                Intent intent = new Intent(MainActivity.this, DashActivity.class);
                 startActivity(intent);
             }
         });

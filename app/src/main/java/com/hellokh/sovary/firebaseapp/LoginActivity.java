@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText editTextLoginEmail, editTextLoginPwd;
     private ProgressBar progressBar;
     private FirebaseAuth authProfile;
+    private Button button;
     private static final String TAG = "LoginActivity";
 
     @Override

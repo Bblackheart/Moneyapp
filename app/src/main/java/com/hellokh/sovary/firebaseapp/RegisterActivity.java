@@ -25,6 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegisterActivity extends AppCompatActivity {
     private EditText editTextRegisterusername, editTextRegisterPwd, editTextRegisterConfirmPwd, editTextRegisteremail;
     private ProgressBar progressBar;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

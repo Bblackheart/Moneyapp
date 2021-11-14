@@ -7,18 +7,20 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class FirstActivity extends AppCompatActivity {
+public class DashActivity extends AppCompatActivity {
+
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
+        setContentView(R.layout.activity_dash);
 
         Button page2 = findViewById(R.id.page2);
         page2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(FirstActivity.this ,page2.class);
+                Intent intent =new Intent(DashActivity.this , Page2.class);
                 startActivity(intent);
             }
         });
@@ -27,7 +29,7 @@ public class FirstActivity extends AppCompatActivity {
         page3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(FirstActivity.this ,page3.class);
+                Intent intent =new Intent(DashActivity.this , Page3.class);
                 startActivity(intent);
             }
         });
@@ -36,7 +38,7 @@ public class FirstActivity extends AppCompatActivity {
         page4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(FirstActivity.this ,page4.class);
+                Intent intent =new Intent(DashActivity.this , Page4.class);
                 startActivity(intent);
             }
         });
@@ -45,7 +47,7 @@ public class FirstActivity extends AppCompatActivity {
         page1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(FirstActivity.this ,FirstActivity.class);
+                Intent intent =new Intent(DashActivity.this , DashActivity.class);
                 startActivity(intent);
             }
         });
@@ -54,7 +56,7 @@ public class FirstActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(FirstActivity.this ,MainActivity.class);
+                Intent intent =new Intent(DashActivity.this ,MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -63,7 +65,7 @@ public class FirstActivity extends AppCompatActivity {
         revenueAcivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(FirstActivity.this ,RevenueActivity.class);
+                Intent intent =new Intent(DashActivity.this ,RevenueActivity.class);
                 startActivity(intent);
             }
         });
@@ -72,7 +74,7 @@ public class FirstActivity extends AppCompatActivity {
         expensesAcivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(FirstActivity.this ,expensesActivity.class);
+                Intent intent =new Intent(DashActivity.this ,expensesActivity.class);
                 startActivity(intent);
             }
         });

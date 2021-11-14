@@ -18,7 +18,7 @@ public class RevenueActivity extends AppCompatActivity {
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RevenueActivity.this, FirstActivity.class);
+                Intent intent = new Intent(RevenueActivity.this, DashActivity.class);
                 startActivity(intent);
             }
         });
