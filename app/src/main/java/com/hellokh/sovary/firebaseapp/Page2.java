@@ -2,12 +2,14 @@ package com.hellokh.sovary.firebaseapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Page2 extends AppCompatActivity {
     EditText getmEditText1;
@@ -22,6 +24,7 @@ public class Page2 extends AppCompatActivity {
     private Button Save_btn;
     String save;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +39,6 @@ public class Page2 extends AppCompatActivity {
         getmEditText1 = findViewById(R.id.edittext_number_1);
         getmEditText2 = findViewById(R.id.edittext_number_2);
         Save_btn = findViewById(R.id.button_save);
-        final TextView editText = findViewById(R.id.textview_result);
-        final TextView editText1 = findViewById(R.id.textview1_result);
 
 
         mButtonAdd.setOnClickListener(new View.OnClickListener() {
@@ -69,52 +70,52 @@ public class Page2 extends AppCompatActivity {
             }
         });
 
-        /*Button btn = findViewById(R.id.button_save);
-        DAOEmployee dao =new DAOEmployee();
-        btn.setOnClickListener(v->
+        Button buttonDash = findViewById(R.id.button_save);
+        DAO dao = new DAO();
+        buttonDash.setOnClickListener(v ->
         {
             User emp = new User(mTextViewResult.getText().toString(), mTextView1Result.getText().toString());
             dao.add(emp).addOnSuccessListener(suc ->
             {
                 Toast.makeText(this, "Record is inserted", Toast.LENGTH_SHORT).show();
-            });*/
+            });
 
 
-        Button page2 = findViewById(R.id.page2);
-        page2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Page2.this, Page2.class);
-                startActivity(i);
-            }
-        });
+            Button page2 = findViewById(R.id.page2);
+            page2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(Page2.this, Page2.class);
+                    startActivity(i);
+                }
+            });
 
-        Button page3 = findViewById(R.id.page3);
-        page3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Page2.this, Page3.class);
-                startActivity(i);
-            }
-        });
+            Button page3 = findViewById(R.id.page3);
+            page3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(Page2.this, Page3.class);
+                    startActivity(i);
+                }
+            });
 
-        Button page4 = findViewById(R.id.page4);
-        page4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Page2.this, Page4.class);
-                startActivity(i);
-            }
-        });
+            Button page4 = findViewById(R.id.page4);
+            page4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(Page2.this, Page4.class);
+                    startActivity(i);
+                }
+            });
 
-        Button page1 = findViewById(R.id.page1);
-        page1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Page2.this, DashActivity.class);
-                startActivity(i);
-            }
+            Button page1 = findViewById(R.id.page1);
+            page1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(Page2.this, DashActivity.class);
+                    startActivity(i);
+                }
+            });
         });
     }
 }
-
