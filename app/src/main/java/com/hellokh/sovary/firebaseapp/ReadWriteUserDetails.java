@@ -9,5 +9,6 @@ public class ReadWriteUserDetails {
         this.username = textUsername;
         this.email = textEmail;
         this.pwd = textPwd;
+
     }
 }

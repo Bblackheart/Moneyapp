@@ -54,7 +54,7 @@ public class UserProfileActivity extends AppCompatActivity {
     private void showUserProfile(FirebaseUser firebaseUser) {
         String userID = firebaseUser.getUid();
 
-        DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Register Users");
+        DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Registered Users");
         referenceProfile.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

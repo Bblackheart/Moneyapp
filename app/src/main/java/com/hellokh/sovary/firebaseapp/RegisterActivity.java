@@ -23,7 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
-    private EditText editTextRegisterusername, editTextRegisterPwd, editTextRegisterConfirmPwd, editTextRegisteremail;
+    private EditText editTextRegisterusername, editTextRegisterPwd, editTextRegisterConfirmPwd, editTextRegisteremail, editTextAmount;
     private ProgressBar progressBar;
     private Button button;
 
@@ -51,6 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String textPwd = editTextRegisterPwd.getText().toString();
                 String textConfirmPwd = editTextRegisterConfirmPwd.getText().toString();
                 String textEmail = editTextRegisteremail.getText().toString();
+                String textAmount = editTextAmount.getText().toString();
 
                 if (TextUtils.isEmpty(textUsername)){
                     Toast.makeText(RegisterActivity.this, "Please enter your username", Toast.LENGTH_LONG).show();
@@ -85,14 +86,14 @@ public class RegisterActivity extends AppCompatActivity {
                     editTextRegisterConfirmPwd.clearComposingText();
                 } else {
                     progressBar.setVisibility(View.VISIBLE);
-                    registerUser(textUsername, textEmail, textPwd, textConfirmPwd);
+                    registerUser(textUsername, textEmail, textPwd, textConfirmPwd, textAmount);
                 }
             }
         });
     }
 
     //Register User using the credentials given
-    private void registerUser(String textUsername, String textEmail, String textPwd, String textConfirmPwd) {
+    private void registerUser(String textUsername, String textEmail, String textPwd, String textConfirmPwd, String textAmount) {
         FirebaseAuth auth = FirebaseAuth.getInstance();
 
         //Create User Profile

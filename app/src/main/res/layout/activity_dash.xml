@@ -54,7 +54,7 @@
                 android:fontFamily="sans-serif-black"
                 android:paddingLeft="20dp"
                 android:paddingTop="20dp"
-                android:text="$5,000.00"
+                android:hint="$5,000.00"
                 android:textColor="#fff"
                 android:textSize="35dp"
                 android:textStyle="bold"
