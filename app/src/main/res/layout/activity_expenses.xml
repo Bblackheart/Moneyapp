@@ -111,8 +111,9 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="25dp"
                 android:text="Back"
-                android:textSize="15dp"
+                android:textSize="10dp"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 android:backgroundTint="@color/light_blue"/>
 
             <Button
@@ -122,8 +123,9 @@
                 android:layout_marginLeft="25dp"
                 android:layout_toRightOf="@id/onebath"
                 android:text="specify"
-                android:textSize="15dp"
+                android:textSize="10dp"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 android:backgroundTint="@color/light_blue"/>
 
             <Button
@@ -133,8 +135,9 @@
                 android:layout_marginLeft="25dp"
                 android:layout_toRightOf="@id/onebath"
                 android:text="Submit"
-                android:textSize="15dp"
+                android:textSize="10dp"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 android:backgroundTint="@color/light_blue"/>
 
 

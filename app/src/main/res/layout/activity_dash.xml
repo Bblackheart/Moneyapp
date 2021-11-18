@@ -62,11 +62,7 @@
 
         </LinearLayout>
 
-        <TableLayout
-            android:layout_width="413dp"
-            android:layout_height="51dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:ignore="MissingConstraints">
+
 
             <TableRow
                 android:layout_width="match_parent"
@@ -91,7 +87,7 @@
 
             </TableRow>
 
-        </TableLayout>
+
 
     </LinearLayout>
 

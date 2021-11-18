@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RevenueActivity">
+    tools:context=".RevenueActivity"
+    android:background="@color/light_gray">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -108,8 +109,9 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="25dp"
                 android:text="Back"
-                android:textSize="15dp"
+                android:textSize="10dp"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 android:backgroundTint="@color/light_blue"/>
 
             <Button
@@ -119,8 +121,9 @@
                 android:layout_marginLeft="25dp"
                 android:layout_toRightOf="@id/onebath"
                 android:text="specify"
-                android:textSize="15dp"
+                android:textSize="10dp"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 android:backgroundTint="@color/light_blue"/>
 
             <Button
@@ -130,8 +133,9 @@
                 android:layout_marginLeft="25dp"
                 android:layout_toRightOf="@id/onebath"
                 android:text="Submit"
-                android:textSize="15dp"
+                android:textSize="10dp"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 android:backgroundTint="@color/light_blue"/>
 
 
