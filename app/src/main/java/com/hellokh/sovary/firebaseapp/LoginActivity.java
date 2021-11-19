@@ -111,7 +111,7 @@ public class LoginActivity extends AppCompatActivity {
         if (authProfile.getCurrentUser() != null) {
             Toast.makeText(LoginActivity.this, "Already Logged In!", Toast.LENGTH_LONG).show();
 
-            startActivity(new Intent(LoginActivity.this, UserProfileActivity.class));
+            startActivity(new Intent(LoginActivity.this, DashActivity.class));
             finish();
         }
         else {

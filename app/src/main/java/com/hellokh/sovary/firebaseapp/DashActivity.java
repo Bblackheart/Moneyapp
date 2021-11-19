@@ -72,8 +72,8 @@ public class DashActivity extends AppCompatActivity {
             }
         });
 
-        Button login = findViewById(R.id.login_btn);
-        login.setOnClickListener(new View.OnClickListener() {
+        Button logout = findViewById(R.id.logout_btn);
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DashActivity.this, MainActivity.class);
@@ -98,6 +98,7 @@ public class DashActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+            showUserProfile(firebaseUser);
     }
 
     private void showUserProfile(FirebaseUser firebaseUser) {

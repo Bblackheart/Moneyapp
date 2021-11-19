@@ -4,11 +4,11 @@ public class User {
     public String amount, amount1;
 
 
-        public User(){};
+    public User(){};
 
-        public User(String amount, String amount1) {
-            this.amount = amount;
-            this.amount1 = amount1;
+    public User(String textAmount, String textAmount1) {
+            this.amount = textAmount;
+            this.amount1 = textAmount1;
 
 
         }

@@ -21,13 +21,13 @@
             android:layout_height="110dp">
 
             <Button
-                android:id="@+id/login_btn"
+                android:id="@+id/logout_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="310dp"
                 android:layout_marginTop="60dp"
-                android:text="login" />
+                android:text="logout" />
 
         </RelativeLayout>
 
