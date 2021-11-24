@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Set the title
-        getSupportActionBar().setTitle("Firebaseapp");
+        getSupportActionBar().setTitle("MoneyApp");
 
         //Open Login Activity
         Button buttonLogin = findViewById(R.id.button_login);

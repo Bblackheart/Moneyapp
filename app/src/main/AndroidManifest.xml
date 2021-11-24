@@ -13,7 +13,7 @@
             android:name=".RevenueActivity"
             android:exported="true" />
         <activity
-            android:name=".expensesActivity"
+            android:name=".ExpensesActivity"
             android:exported="true" />
         <activity
             android:name=".Page4"

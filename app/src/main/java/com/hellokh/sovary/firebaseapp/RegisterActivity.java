@@ -113,6 +113,7 @@ public class RegisterActivity extends AppCompatActivity {
                             ReadWriteUserDetails writeUserDetails = new ReadWriteUserDetails(textUsername, textEmail, textPwd);
 
 
+
                             //Extracting User reference from Database for "Registered User"
                             DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Registered Users");
 

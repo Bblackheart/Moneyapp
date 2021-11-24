@@ -1,10 +1,8 @@
 package com.hellokh.sovary.firebaseapp;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -94,7 +92,7 @@ public class DashActivity extends AppCompatActivity {
         expensesAcivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashActivity.this, expensesActivity.class);
+                Intent intent = new Intent(DashActivity.this, ExpensesActivity.class);
                 startActivity(intent);
             }
         });
