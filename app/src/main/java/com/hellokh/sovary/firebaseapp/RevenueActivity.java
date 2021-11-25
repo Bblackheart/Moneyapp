@@ -27,7 +27,7 @@ public class RevenueActivity extends AppCompatActivity {
 
         display = findViewById(R.id.edittext_number_1);
         editTextNumber = findViewById(R.id.edittext_number_1);
-        editTextNumber.setShowSoftInputOnFocus(false);
+        editTextNumber.setShowSoftInputOnFocus(true);
         submitbtn = findViewById(R.id.Submit_btn);
         reff = FirebaseDatabase.getInstance().getReference().child("Registered Users");
         getSupportActionBar().setTitle("Revenue");

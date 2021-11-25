@@ -15,8 +15,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <TextView
-            android:text="Revenue"
-            android:textSize="50dp" />
+            android:text="รายได้"
+            android:textSize="40dp" />
         <EditText
             android:id="@+id/edittext_number_1"
             android:layout_width="match_parent"
@@ -127,7 +127,7 @@
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="25dp"
-                android:layout_toRightOf="@id/onebath"
+                android:layout_toRightOf="@id/Back"
                 android:text="clear"
                 android:textSize="10dp"
                 android:textColor="@color/black"
@@ -139,7 +139,7 @@
                 android:layout_width="10dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="25dp"
-                android:layout_toRightOf="@id/onebath"
+                android:layout_toRightOf="@id/clear_btn"
                 android:text="Submit"
                 android:textSize="10dp"
                 android:textColor="@color/black"
