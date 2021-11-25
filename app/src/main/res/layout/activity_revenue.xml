@@ -23,40 +23,45 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/textView"
             android:layout_marginTop="20dp"
-            android:inputType="number" />
+            android:inputType="number"
+            android:text="Enter a value"
+            android:autofillHints="false"/>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/onebath"
+                android:id="@+id/onebtn"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="25dp"
-                android:text="1"
-                android:textSize="30dp"
-                android:backgroundTint="@color/blue_1"/>
+                android:backgroundTint="@color/blue_1"
+                android:onClick="onebtn"
+                android:text="@string/one"
+                android:textSize="30dp"/>
 
             <Button
-                android:id="@+id/fivebath"
+                android:id="@+id/fivebtn"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="25dp"
-                android:layout_toRightOf="@id/onebath"
-                android:text="5"
-                android:textSize="30dp"
-                android:backgroundTint="@color/blue_1"/>
+                android:layout_toRightOf="@id/onebtn"
+                android:backgroundTint="@color/blue_1"
+                android:onClick="fivebtn"
+                android:text="@string/five"
+                android:textSize="30dp"/>
 
             <Button
-                android:id="@+id/tenbath"
+                android:id="@+id/tenbtn"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="25dp"
-                android:layout_toRightOf="@id/onebath"
-                android:text="10"
-                android:textSize="30dp"
-                android:backgroundTint="@color/blue_1"/>
+                android:layout_toRightOf="@id/fivebtn"
+                android:backgroundTint="@color/blue_1"
+                android:onClick="tenbtn"
+                android:text="@string/ten"
+                android:textSize="30dp"/>
 
         </TableRow>
 
@@ -65,36 +70,39 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/twentybath"
+                android:id="@+id/twentybtn"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="10dp"
-                android:text="20"
-                android:textSize="30dp"
-                android:backgroundTint="@color/blue_1"/>
+                android:backgroundTint="@color/blue_1"
+                android:onClick="twentybtn"
+                android:text="@string/twenty"
+                android:textSize="30dp"/>
 
             <Button
-                android:id="@+id/fiftybath"
+                android:id="@+id/fiftybtn"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="10dp"
-                android:layout_toRightOf="@id/onebath"
-                android:text="50"
-                android:textSize="30dp"
-                android:backgroundTint="@color/blue_1"/>
+                android:layout_toRightOf="@id/twentybtn"
+                android:backgroundTint="@color/blue_1"
+                android:onClick="fiftybtn"
+                android:text="@string/fifty"
+                android:textSize="30dp"/>
 
             <Button
-                android:id="@+id/onehundredbath"
+                android:id="@+id/onehundredbtn"
                 android:layout_width="10dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="10dp"
-                android:layout_toRightOf="@id/onebath"
-                android:text="100"
-                android:textSize="30dp"
-                android:backgroundTint="@color/blue_1"/>
+                android:layout_toRightOf="@id/fiftybtn"
+                android:backgroundTint="@color/blue_1"
+                android:onClick="onehundredbtn"
+                android:text="@string/onehundred"
+                android:textSize="30dp"/>
 
 
         </TableRow>
