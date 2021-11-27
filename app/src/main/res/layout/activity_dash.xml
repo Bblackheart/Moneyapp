@@ -75,7 +75,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    android:text="revenue" />
+                    android:text="revenue"
+                    android:backgroundTint="@color/lime"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/expensesbtn"
@@ -83,7 +85,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    android:text="expenses" />
+                    android:text="expenses"
+                    android:backgroundTint="@color/red"/>
 
             </TableRow>
 
