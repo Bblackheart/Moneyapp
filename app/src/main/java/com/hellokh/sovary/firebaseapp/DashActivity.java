@@ -74,7 +74,7 @@ public class DashActivity extends AppCompatActivity {
         expensesAcivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(DashActivity.this ,expensesActivity.class);
+                Intent intent =new Intent(DashActivity.this ,ExpensesActivity.class);
                 startActivity(intent);
             }
         });

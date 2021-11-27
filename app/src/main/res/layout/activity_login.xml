@@ -75,6 +75,8 @@
             android:layout_marginLeft="70dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="70dp"
+            android:background="#433E3E"
+            android:backgroundTint="#858585"
             android:text="Login" />
 
         <ProgressBar

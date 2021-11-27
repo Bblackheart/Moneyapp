@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class expensesActivity extends AppCompatActivity {
+public class ExpensesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class expensesActivity extends AppCompatActivity {
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(expensesActivity.this, DashActivity.class);
+                Intent intent = new Intent(ExpensesActivity.this, DashActivity.class);
                 startActivity(intent);
             }
         });

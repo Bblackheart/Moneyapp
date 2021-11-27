@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".expensesActivity"
-    android:background="@color/light_gray">
+    tools:context=".ExpensesActivity"
+    >
 
     <TableLayout
         android:layout_width="match_parent"
@@ -16,8 +16,9 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:text="Exqenses"
-            android:textSize="50dp" />
+            android:text="Expenses"
+            android:textSize="50dp"
+            />
 
         <EditText
             android:id="@+id/edittext_number_1"
@@ -25,46 +26,53 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/textView"
             android:layout_marginTop="20dp"
+
             android:inputType="number" />
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp">
 
             <Button
                 android:id="@+id/onebath"
                 android:layout_width="100dp"
-                android:layout_height="80dp"
+                android:layout_height="100dp"
                 android:layout_marginLeft="25dp"
+                android:background="@drawable/custom_button"
+                android:backgroundTint="#FFC107"
                 android:text="1"
                 android:textSize="30dp"
-                android:backgroundTint="@color/blue_1"/>
+                />
 
             <Button
                 android:id="@+id/fivebath"
                 android:layout_width="100dp"
-                android:layout_height="80dp"
+                android:layout_height="100dp"
                 android:layout_marginLeft="25dp"
                 android:layout_toRightOf="@id/onebath"
+                android:backgroundTint="#FFC107"
+                android:background="@drawable/custom_button"
                 android:text="5"
-                android:textSize="30dp"
-                android:backgroundTint="@color/blue_1"/>
+                android:textSize="30dp" />
 
             <Button
                 android:id="@+id/tenbath"
                 android:layout_width="100dp"
-                android:layout_height="80dp"
+                android:layout_height="100dp"
                 android:layout_marginLeft="25dp"
                 android:layout_toRightOf="@id/onebath"
+                android:background="@drawable/custom_button"
+                android:backgroundTint="#FFC107"
                 android:text="10"
-                android:textSize="30dp"
-                android:backgroundTint="@color/blue_1"/>
+                android:textSize="30dp" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp">
 
             <Button
                 android:id="@+id/twentybath"
@@ -72,9 +80,9 @@
                 android:layout_height="80dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="10dp"
+                android:backgroundTint="@color/dark_green"
                 android:text="20"
-                android:textSize="30dp"
-                android:backgroundTint="@color/blue_1"/>
+                android:textSize="30dp" />
 
             <Button
                 android:id="@+id/fiftybath"
@@ -83,9 +91,9 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@id/onebath"
+                android:backgroundTint="@color/dark_green"
                 android:text="50"
-                android:textSize="30dp"
-                android:backgroundTint="@color/blue_1"/>
+                android:textSize="30dp" />
 
             <Button
                 android:id="@+id/onehundredbath"
@@ -94,26 +102,27 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@id/onebath"
+                android:backgroundTint="@color/dark_green"
                 android:text="100"
-                android:textSize="30dp"
-                android:backgroundTint="@color/blue_1"/>
+                android:textSize="30dp" />
 
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
 
             <Button
                 android:id="@+id/Back"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="25dp"
+                android:backgroundTint="#7D8181"
                 android:text="Back"
-                android:textSize="15dp"
                 android:textColor="@color/black"
-                android:backgroundTint="@color/light_blue"/>
+                android:textSize="15dp" />
 
             <Button
                 android:id="@+id/specify"
@@ -132,10 +141,10 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="25dp"
                 android:layout_toRightOf="@id/onebath"
+                android:backgroundTint="@color/lime"
                 android:text="Submit"
-                android:textSize="15dp"
                 android:textColor="@color/black"
-                android:backgroundTint="@color/light_blue"/>
+                android:textSize="15dp" />
 
 
         </TableRow>
