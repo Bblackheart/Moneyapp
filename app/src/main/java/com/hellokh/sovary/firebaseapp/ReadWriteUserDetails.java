@@ -27,5 +27,7 @@ public class ReadWriteUserDetails {
         this.amount = textAmount;
         this.amount1 = textAmount1;
     }
+
+
 }
 
