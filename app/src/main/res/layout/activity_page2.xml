@@ -7,13 +7,6 @@
     tools:context=".Page2">
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="page2"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TableLayout
         android:layout_width="406dp"
         android:layout_height="48dp"
@@ -72,6 +65,7 @@
         android:layout_below="@id/textview1_result"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
+        android:backgroundTint="#8BC34A"
         android:text="add" />
 
     <Button
@@ -82,6 +76,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:layout_toRightOf="@id/button_add"
+        android:backgroundTint="#4E4E4E"
         android:text="clear" />
 
     <Button
@@ -92,6 +87,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:layout_toRightOf="@id/button_add"
+        android:backgroundTint="#009688"
         android:text="save" />
 
     <Button
@@ -144,7 +140,7 @@
         android:layout_marginTop="32dp"
         android:text="1 DAY"
         android:textSize="28dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView5"
