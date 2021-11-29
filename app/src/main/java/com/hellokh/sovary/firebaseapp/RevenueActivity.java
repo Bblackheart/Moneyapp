@@ -29,7 +29,7 @@ public class RevenueActivity extends AppCompatActivity {
         editTextNumber = findViewById(R.id.edittext_number_1);
         editTextNumber.setShowSoftInputOnFocus(true);
         submitbtn = findViewById(R.id.Submit_btn);
-        reff = FirebaseDatabase.getInstance().getReference().child("Registered Users");
+        reff = FirebaseDatabase.getInstance().getReference().child("App Financial").child("income-expense");
         getSupportActionBar().setTitle("Revenue");
         readWriteUserDetails = new ReadWriteUserDetails();
         clearbtn = findViewById(R.id.clear_btn);
@@ -69,6 +69,7 @@ public class RevenueActivity extends AppCompatActivity {
             }
         });
     }
+
     private void updateText(String strToAdd){
         String oldStr = display.getText().toString();
         int cursorPos = display.getSelectionStart();
@@ -83,9 +84,7 @@ public class RevenueActivity extends AppCompatActivity {
         }
     }
 
-    public void onebtn(View view){
-        updateText("1");
-    }
+    public void onebtn(View view) { updateText("1"); }
 
     public void fivebtn(View view){
         updateText("5");
@@ -95,9 +94,7 @@ public class RevenueActivity extends AppCompatActivity {
         updateText("10");
     }
 
-    public void twentybtn(View view){
-        updateText("20");
-    }
+    public void twentybtn(View view) { updateText("20"); }
 
     public void fiftybtn(View view){
         updateText("50");

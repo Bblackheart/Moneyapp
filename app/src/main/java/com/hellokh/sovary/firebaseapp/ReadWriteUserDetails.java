@@ -4,6 +4,7 @@ public class ReadWriteUserDetails {
     public String username, email, pwd;
     public String amount, amount1;
     private Long exp;
+    private Long rev;
 
     public Long getExp() {
         return exp;
@@ -12,6 +13,7 @@ public class ReadWriteUserDetails {
     public void setExp(Long exp) {
         this.exp = exp;
     }
+
 
     public ReadWriteUserDetails(){
 
@@ -23,9 +25,9 @@ public class ReadWriteUserDetails {
         this.pwd = textPwd;
     }
 
-    public ReadWriteUserDetails(String textAmount, String textAmount1) {
-        this.amount = textAmount;
-        this.amount1 = textAmount1;
+    public ReadWriteUserDetails(Long TextExpenses, Long TextRevenue) {
+        this.exp = TextExpenses;
+        this.rev = TextRevenue;
     }
 
 

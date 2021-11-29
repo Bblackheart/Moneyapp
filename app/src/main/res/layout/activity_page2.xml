@@ -84,15 +84,6 @@
         android:layout_toRightOf="@id/button_add"
         android:text="clear" />
 
-    <Button
-        android:id="@+id/button_save"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/button_add"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@id/button_add"
-        android:text="save" />
 
     <Button
         android:id="@+id/page1"

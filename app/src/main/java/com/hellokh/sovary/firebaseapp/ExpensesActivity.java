@@ -32,7 +32,7 @@ public class ExpensesActivity extends AppCompatActivity {
         editTextNumber = findViewById(R.id.edittext_number_1);
         editTextNumber.setShowSoftInputOnFocus(true);
         submitbtn = findViewById(R.id.Submit_btn);
-        reff = FirebaseDatabase.getInstance().getReference().child("Registered Users");
+        reff = FirebaseDatabase.getInstance().getReference().child("App Financial").child("income-expense");
         getSupportActionBar().setTitle("Expenses");
         readWriteUserDetails = new ReadWriteUserDetails();
         clearbtn = findViewById(R.id.clear_btn);
@@ -57,12 +57,19 @@ public class ExpensesActivity extends AppCompatActivity {
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                insertData();
                 Long expenses1 = Long.parseLong(editTextNumber.getText().toString());
 
                 readWriteUserDetails.setExp(expenses1);
 
                 reff.child("expenses").setValue(readWriteUserDetails);
                 Toast.makeText(ExpensesActivity.this, "Record Successfully", Toast.LENGTH_LONG).show();
+            }
+
+            private void insertData() {
+                String number = editTextNumber.getText().toString();
+
+                ReadWriteUserDetails readWriteUserDetails = new ReadWriteUserDetails();
             }
         });
         clearbtn.setOnClickListener(new View.OnClickListener() {

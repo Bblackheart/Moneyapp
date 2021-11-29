@@ -84,24 +84,6 @@ public class Page2 extends AppCompatActivity {
             }
         });
 
-        Button buttonSave = findViewById(R.id.button_save);
-        buttonSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String textAmount = TextViewResult.getText().toString().trim();
-                String textAmount1 = TextView1Result.getText().toString().trim();
-
-                if (TextUtils.isEmpty(textAmount)){
-                    Toast.makeText(Page2.this,"", Toast.LENGTH_LONG).show();
-                    TextViewResult.requestFocus();
-                } else if (TextUtils.isEmpty(textAmount1)){
-                    Toast.makeText(Page2.this, "", Toast.LENGTH_LONG).show();
-                    TextView1Result.requestFocus();
-                } else {
-                    registerUser(textAmount, textAmount1);
-                }
-            }
-        });
 
         Button page2 = findViewById(R.id.page2);
         page2.setOnClickListener(new View.OnClickListener() {
@@ -153,18 +135,18 @@ public class Page2 extends AppCompatActivity {
                     /*UserProfileChangeRequest profileChangeRequest = new UserProfileChangeRequest.Builder().setDisplayName(textAmount).build();
                     firebaseUser.updateProfile(profileChangeRequest);*/
 
-                    ReadWriteUserDetails writeUserDetails = new ReadWriteUserDetails(textAmount, textAmount1);
+                    /*ReadWriteUserDetails writeUserDetails = new ReadWriteUserDetails(textAmount, textAmount1);*/
 
                     DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Registered Users");
 
-                    referenceProfile.child(firebaseUser.getUid()).setValue(writeUserDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    /*referenceProfile.child(firebaseUser.getUid()).setValue(writeUserDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()){
                                 firebaseUser.sendEmailVerification();
                             }
                         }
-                    });
+                    });*/
                 }
             }
         });
