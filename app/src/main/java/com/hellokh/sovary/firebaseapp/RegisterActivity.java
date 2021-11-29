@@ -52,6 +52,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String textConfirmPwd = editTextRegisterConfirmPwd.getText().toString();
                 String textEmail = editTextRegisteremail.getText().toString();
 
+
                 if (TextUtils.isEmpty(textUsername)){
                     Toast.makeText(RegisterActivity.this, "Please enter your username", Toast.LENGTH_LONG).show();
                     editTextRegisterusername.setError("Username is required");
@@ -112,8 +113,9 @@ public class RegisterActivity extends AppCompatActivity {
                             ReadWriteUserDetails writeUserDetails = new ReadWriteUserDetails(textUsername, textEmail, textPwd);
 
 
+
                             //Extracting User reference from Database for "Registered User"
-                            DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Registered Users");
+                            DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("App Financial").child("User");
 
                             referenceProfile.child(firebaseUser.getUid()).setValue(writeUserDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override

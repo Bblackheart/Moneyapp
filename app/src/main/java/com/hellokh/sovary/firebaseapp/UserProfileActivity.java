@@ -32,7 +32,7 @@ public class UserProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
-        getSupportActionBar().setTitle("Home");
+        getSupportActionBar().setTitle("UserProfile");
 
         textViewWelcome = findViewById(R.id.textView_show_welcome);
         textViewUsername = findViewById(R.id.textView_show_username);
@@ -54,7 +54,7 @@ public class UserProfileActivity extends AppCompatActivity {
     private void showUserProfile(FirebaseUser firebaseUser) {
         String userID = firebaseUser.getUid();
 
-        DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Register Users");
+        DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Registered Users");
         referenceProfile.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

@@ -4,15 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class RevenueActivity extends AppCompatActivity {
+public class ExpensesActivity extends AppCompatActivity {
     private EditText editTextNumber;
     private Button submitbtn;
     private DatabaseReference reff;
@@ -23,16 +26,17 @@ public class RevenueActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_revenue);
+        setContentView(R.layout.activity_expenses);
 
         display = findViewById(R.id.edittext_number_1);
         editTextNumber = findViewById(R.id.edittext_number_1);
         editTextNumber.setShowSoftInputOnFocus(true);
         submitbtn = findViewById(R.id.Submit_btn);
         reff = FirebaseDatabase.getInstance().getReference().child("App Financial").child("income-expense");
-        getSupportActionBar().setTitle("Revenue");
+        getSupportActionBar().setTitle("Expenses");
         readWriteUserDetails = new ReadWriteUserDetails();
         clearbtn = findViewById(R.id.clear_btn);
+
 
         editTextNumber.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,22 +50,28 @@ public class RevenueActivity extends AppCompatActivity {
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RevenueActivity.this, DashActivity.class);
+                Intent intent = new Intent(ExpensesActivity.this, DashActivity.class);
                 startActivity(intent);
             }
         });
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Long revenue1 = Long.parseLong(editTextNumber.getText().toString());
+                insertData();
+                Long expenses1 = Long.parseLong(editTextNumber.getText().toString());
 
-                readWriteUserDetails.setExp(revenue1);
+                readWriteUserDetails.setExp(expenses1);
 
-                reff.child("revenue").setValue(readWriteUserDetails);
-                Toast.makeText(RevenueActivity.this, "Record Successfully", Toast.LENGTH_LONG).show();
+                reff.child("expenses").setValue(readWriteUserDetails);
+                Toast.makeText(ExpensesActivity.this, "Record Successfully", Toast.LENGTH_LONG).show();
+            }
+
+            private void insertData() {
+                String number = editTextNumber.getText().toString();
+
+                ReadWriteUserDetails readWriteUserDetails = new ReadWriteUserDetails();
             }
         });
-
         clearbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +94,9 @@ public class RevenueActivity extends AppCompatActivity {
         }
     }
 
-    public void onebtn(View view) { updateText("1"); }
+    public void onebtn(View view){
+        updateText("1");
+    }
 
     public void fivebtn(View view){
         updateText("5");
@@ -94,7 +106,9 @@ public class RevenueActivity extends AppCompatActivity {
         updateText("10");
     }
 
-    public void twentybtn(View view) { updateText("20"); }
+    public void twentybtn(View view){
+        updateText("20");
+    }
 
     public void fiftybtn(View view){
         updateText("50");
@@ -103,4 +117,5 @@ public class RevenueActivity extends AppCompatActivity {
     public void onehundredbtn(View view){
         updateText("100");
     }
+
 }
