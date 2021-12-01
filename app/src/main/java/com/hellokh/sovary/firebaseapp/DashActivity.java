@@ -48,14 +48,14 @@ public class DashActivity extends AppCompatActivity {
     private void showUserProfile(FirebaseUser firebaseUser) {
         String userID = firebaseUser.getUid();
 
-        DatabaseReference referenceDash = FirebaseDatabase.getInstance().getReference("App Financial").child("income-expense").child("expenses").child("revenue");
+        DatabaseReference referenceDash = FirebaseDatabase.getInstance().getReference("App Financial").child("income-expense");
         referenceDash.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 ReadWriteUserDetails readUserDetails = snapshot.getValue(ReadWriteUserDetails.class);
                 if (readUserDetails != null){
-                    expenses = firebaseUser.getUid();
-                    revenue = firebaseUser.getUid();
+                    expenses = firebaseUser.getDisplayName();
+                    revenue = firebaseUser.getDisplayName();
 
                     expenses = readUserDetails.expenses;
                     revenue = readUserDetails.revenue;
@@ -70,6 +70,7 @@ public class DashActivity extends AppCompatActivity {
                 Toast.makeText(DashActivity.this, "Something went wrong!", Toast.LENGTH_LONG).show();
             }
         });
+
 
         Button page2 = findViewById(R.id.page2);
         page2.setOnClickListener(new View.OnClickListener() {

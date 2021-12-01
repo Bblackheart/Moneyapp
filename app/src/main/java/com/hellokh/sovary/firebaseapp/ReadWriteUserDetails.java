@@ -2,7 +2,6 @@ package com.hellokh.sovary.firebaseapp;
 
 public class ReadWriteUserDetails {
     public String username, email, pwd;
-    public String amount, amount1;
     public String expenses, revenue;
     private Long exp;
     private Long rev;
@@ -18,6 +17,7 @@ public class ReadWriteUserDetails {
 
     public ReadWriteUserDetails(){
 
+
     };
 
     public ReadWriteUserDetails(String textUsername, String textEmail, String textPwd){
@@ -26,11 +26,12 @@ public class ReadWriteUserDetails {
         this.pwd = textPwd;
     }
 
-    public ReadWriteUserDetails(String textExpenses, String textRevenue) {
-        this.expenses = textExpenses;
-        this.revenue = textRevenue;
+    public ReadWriteUserDetails(String expenses, String revenue) {
+        this.expenses = expenses;
+        this.revenue = revenue;
     }
-
-
 }
+
+
+
 

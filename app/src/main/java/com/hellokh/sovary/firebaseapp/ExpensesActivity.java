@@ -54,12 +54,13 @@ public class ExpensesActivity extends AppCompatActivity {
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Long revenue1 = new Long(editTextNumber.getText().toString());
+                insertExpenses();
+                /*Long revenue1 = new Long(editTextNumber.getText().toString());
 
                 readWriteUserDetails.setExp(revenue1);
 
                 reff.child("expenses").setValue(readWriteUserDetails);
-                Toast.makeText(ExpensesActivity.this, "Record Successfully", Toast.LENGTH_LONG).show();
+                Toast.makeText(ExpensesActivity.this, "Record Successfully", Toast.LENGTH_LONG).show();*/
             }
         });
 
@@ -69,6 +70,13 @@ public class ExpensesActivity extends AppCompatActivity {
                 editTextNumber.getText().clear();
             }
         });
+    }
+    private void insertExpenses(){
+        String expenses = editTextNumber.getText().toString().trim();
+
+        InsertExp insertExp = new InsertExp(expenses);
+        reff.push().setValue(insertExp);
+        Toast.makeText(ExpensesActivity.this, "Data inserted", Toast.LENGTH_LONG).show();
     }
 
     private void updateText(String strToAdd){
@@ -85,7 +93,7 @@ public class ExpensesActivity extends AppCompatActivity {
         }
     }
 
-    public void onebtn(View view) { updateText("1"); }
+    public void onebtn(View view) {updateText("1");}
 
     public void fivebtn(View view){
         updateText("5");

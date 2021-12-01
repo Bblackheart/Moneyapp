@@ -53,12 +53,13 @@ public class RevenueActivity extends AppCompatActivity {
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Long revenue1 = new Long(editTextNumber.getText().toString());
+                insertRevenue();
+                /*Long revenue1 = new Long(editTextNumber.getText().toString());
 
                 readWriteUserDetails.setExp(revenue1);
 
                 reff.child("revenue").setValue(readWriteUserDetails);
-                Toast.makeText(RevenueActivity.this, "Record Successfully", Toast.LENGTH_LONG).show();
+                Toast.makeText(RevenueActivity.this, "Record Successfully", Toast.LENGTH_LONG).show();*/
             }
         });
 
@@ -69,6 +70,14 @@ public class RevenueActivity extends AppCompatActivity {
             }
         });
     }
+    private void insertRevenue(){
+        String revenue = editTextNumber.getText().toString().trim();
+
+        InsertRev insertRev = new InsertRev(revenue);
+        reff.push().setValue(insertRev);
+        Toast.makeText(RevenueActivity.this, "Data inserted", Toast.LENGTH_LONG).show();
+    }
+
 
     private void updateText(String strToAdd){
         String oldStr = display.getText().toString();
