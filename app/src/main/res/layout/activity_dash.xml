@@ -27,7 +27,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="310dp"
                 android:layout_marginTop="60dp"
-                android:text="login" />
+                android:text="logout" />
 
         </RelativeLayout>
 
@@ -54,16 +54,29 @@
                 android:fontFamily="sans-serif-black"
                 android:paddingLeft="20dp"
                 android:paddingTop="20dp"
-                android:text="$5,000.00"
+                android:hint="$5,000.00"
                 android:textColor="#fff"
                 android:textSize="35dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:id="@+id/textView_show_revenue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingLeft="20dp"
+                android:layout_marginLeft="70dp"
+                android:paddingTop="10dp"
+                android:hint="$5,000.00"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/textView_show_expenses"/>
 
         </LinearLayout>
 
         <TableLayout
-            android:layout_width="413dp"
-            android:layout_height="51dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:ignore="MissingConstraints">
 
@@ -73,7 +86,7 @@
 
 
                 <Button
-                    android:id="@+id/revenuebtn"
+                    android:id="@+id/revenue_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -82,7 +95,7 @@
                     android:text="revenue" />
 
                 <Button
-                    android:id="@+id/expensesbtn"
+                    android:id="@+id/expenses_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -110,7 +123,7 @@
                 android:id="@+id/page1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="15dp"
                 android:text="page1" />
 
             <Button

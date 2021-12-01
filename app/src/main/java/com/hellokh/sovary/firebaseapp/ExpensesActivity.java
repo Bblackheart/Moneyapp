@@ -54,7 +54,7 @@ public class ExpensesActivity extends AppCompatActivity {
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Long revenue1 = Long.parseLong(editTextNumber.getText().toString());
+                Long revenue1 = new Long(editTextNumber.getText().toString());
 
                 readWriteUserDetails.setExp(revenue1);
 
