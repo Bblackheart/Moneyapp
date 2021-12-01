@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RevenueActivity">
+    tools:context=".RevenueActivity"
+    android:background="@color/light_gray">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -13,9 +14,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <TextView
-            android:text="Revenue"
-            android:textSize="50dp" />
+            android:text="รายรับ"
+            android:textSize="50dp"
+            android:id="@+id/textView"/>
+
         <EditText
             android:id="@+id/edittext_number_1"
             android:layout_width="match_parent"
@@ -27,10 +31,10 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="20dp">
 
             <Button
-                android:id="@+id/onebath"
+                android:id="@+id/onebtn"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="25dp"
@@ -40,22 +44,22 @@
                 android:textSize="30dp" />
 
             <Button
-                android:id="@+id/fivebath"
+                android:id="@+id/fivebtn"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="25dp"
-                android:layout_toRightOf="@id/onebath"
+                android:layout_toRightOf="@id/onebtn"
                 android:background="@drawable/custom_button"
                 android:backgroundTint="#FFC107"
                 android:text="5"
                 android:textSize="30dp" />
 
             <Button
-                android:id="@+id/tenbath"
+                android:id="@+id/tenbtn"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="25dp"
-                android:layout_toRightOf="@id/onebath"
+                android:layout_toRightOf="@id/fivebtn"
                 android:background="@drawable/custom_button"
                 android:backgroundTint="#FFC107"
                 android:text="10"
@@ -66,10 +70,10 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="20dp">
 
             <Button
-                android:id="@+id/twentybath"
+                android:id="@+id/twentybtn"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="25dp"
@@ -79,23 +83,23 @@
                 android:textSize="30dp" />
 
             <Button
-                android:id="@+id/fiftybath"
+                android:id="@+id/fiftybtn"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="10dp"
-                android:layout_toRightOf="@id/onebath"
+                android:layout_toRightOf="@id/twentybtn"
                 android:backgroundTint="@color/dark_green"
                 android:text="50"
                 android:textSize="30dp" />
 
             <Button
-                android:id="@+id/onehundredbath"
+                android:id="@+id/onehundredbtn"
                 android:layout_width="10dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="10dp"
-                android:layout_toRightOf="@id/onebath"
+                android:layout_toRightOf="@id/fiftybtn"
                 android:backgroundTint="@color/dark_green"
                 android:text="100"
                 android:textSize="30dp" />
@@ -119,22 +123,22 @@
                 android:textSize="15dp" />
 
             <Button
-                android:id="@+id/specify"
+                android:id="@+id/clear_btn"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="25dp"
-                android:layout_toRightOf="@id/onebath"
+                android:layout_toRightOf="@id/Back"
                 android:text="specify"
                 android:textSize="15dp"
                 android:textColor="@color/black"
                 android:backgroundTint="@color/light_blue"/>
 
             <Button
-                android:id="@+id/Submit"
+                android:id="@+id/Submit_btn"
                 android:layout_width="10dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="25dp"
-                android:layout_toRightOf="@id/onebath"
+                android:layout_toRightOf="@id/clear_btn"
                 android:backgroundTint="@color/lime"
                 android:text="Submit"
                 android:textColor="@color/black"
