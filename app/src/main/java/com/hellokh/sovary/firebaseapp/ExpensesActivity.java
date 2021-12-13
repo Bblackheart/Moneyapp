@@ -24,7 +24,7 @@ public class ExpensesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_revenue);
+        setContentView(R.layout.activity_expenses);
 
         display = findViewById(R.id.edittext_number_1);
         editTextNumber = findViewById(R.id.edittext_number_1);

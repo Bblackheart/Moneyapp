@@ -39,7 +39,7 @@
                 android:layout_height="100dp"
                 android:layout_marginLeft="25dp"
                 android:background="@drawable/custom_button"
-                android:backgroundTint="#FFC107"
+                android:backgroundTint="@color/yellow"
                 android:onClick="onebtn"
                 android:text="1"
                 android:textSize="30dp" />
@@ -133,6 +133,7 @@
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/Back"
                 android:text="clear"
                 android:textSize="15dp"
                 android:textColor="@color/black"
@@ -143,6 +144,7 @@
                 android:layout_width="10dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/clear_btn"
                 android:backgroundTint="@color/lime"
                 android:text="Submit"
                 android:textColor="@color/black"
@@ -155,5 +157,4 @@
 
 
     </TableLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,9 +26,9 @@ public class ReadWriteUserDetails {
         this.pwd = textPwd;
     }
 
-    public ReadWriteUserDetails(String expenses, String revenue) {
-        this.expenses = expenses;
-        this.revenue = revenue;
+    public ReadWriteUserDetails(String textExpenses, String textRevenue) {
+        this.expenses = textExpenses;
+        this.revenue = textRevenue;
     }
 }
 

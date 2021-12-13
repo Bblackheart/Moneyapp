@@ -15,13 +15,13 @@
         android:background="@color/white">
 
         <TextView
+            android:id="@+id/textView_register_head"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView_register_head"
             android:layout_marginTop="30dp"
             android:text="Please enter your details to Register on the App"
             android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
         <TextView
             android:id="@+id/textView_register_username"

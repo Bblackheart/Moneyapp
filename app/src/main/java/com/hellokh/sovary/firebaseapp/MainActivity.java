@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDashActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, UserProfileActivity.class);
+                Intent intent = new Intent(MainActivity.this, DashActivity.class);
                 startActivity(intent);
             }
         });

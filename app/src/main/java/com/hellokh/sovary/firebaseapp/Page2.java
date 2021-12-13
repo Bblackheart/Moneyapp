@@ -52,6 +52,7 @@ public class Page2 extends AppCompatActivity {
         mButtonClear = findViewById(R.id.button_clear);
         getmEditText1 = findViewById(R.id.edittext_number_1);
         getmEditText2 = findViewById(R.id.edittext_number_2);
+        getSupportActionBar().setTitle("Calculate");
 
 
 

@@ -15,13 +15,13 @@
         android:background="@color/white">
 
         <TextView
+            android:id="@+id/textView_login_head"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView_login_head"
             android:layout_marginTop="30dp"
-            android:text="Please enter your credentials to login"
+            android:text="Please enter your information to login"
             android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
         <TextView
             android:layout_width="match_parent"
