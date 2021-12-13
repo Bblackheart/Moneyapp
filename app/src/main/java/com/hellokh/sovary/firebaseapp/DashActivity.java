@@ -25,8 +25,9 @@ import com.google.firebase.database.ValueEventListener;
 public class DashActivity extends AppCompatActivity {
 
     private Button button;
-    private TextView textViewExpenses, textViewRevenue;
+    private String username, email;
     private String expenses, revenue;
+    private TextView textViewUsername;
     private FirebaseAuth authDash;
 
     @Override
@@ -35,8 +36,7 @@ public class DashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dash);
         getSupportActionBar().setTitle("Dashboard");
 
-        textViewExpenses = findViewById(R.id.textView_show_expenses);
-        textViewRevenue = findViewById(R.id.textView_show_revenue);
+        textViewUsername = findViewById(R.id.textView_show_user);
 
         authDash = FirebaseAuth.getInstance();
         FirebaseUser firebaseUser = authDash.getCurrentUser();
@@ -46,7 +46,7 @@ public class DashActivity extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
         } else  {
             showUserProfile(firebaseUser);
-            /*dashUser(textViewExpenses, textViewRevenue);*/
+
         }
     }
 
@@ -66,26 +66,26 @@ public class DashActivity extends AppCompatActivity {
     private void showUserProfile(FirebaseUser firebaseUser) {
         String userID = firebaseUser.getUid();
 
-        DatabaseReference referenceDash = FirebaseDatabase.getInstance().getReference("App Financial").child("income-expense");
-        referenceDash.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+        DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("App Financial").child("User");
+        referenceProfile.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 ReadWriteUserDetails readUserDetails = snapshot.getValue(ReadWriteUserDetails.class);
                 if (readUserDetails != null){
-                    expenses = firebaseUser.getDisplayName();
-                    revenue = firebaseUser.getDisplayName();
+                    username = firebaseUser.getDisplayName();
+                    email = firebaseUser.getEmail();
 
-                    expenses = readUserDetails.expenses;
-                    revenue = readUserDetails.revenue;
+                    username = readUserDetails.username;
+                    email = readUserDetails.email;
 
-                    textViewExpenses.setText("$ " + expenses);
-                    textViewRevenue.setText("-$ " + revenue);
+                    textViewUsername.setText(username);
+
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(DashActivity.this, "Something went wrong!", Toast.LENGTH_LONG).show();
+                Toast.makeText(DashActivity.this, "Something went wrong! ", Toast.LENGTH_LONG).show();
             }
         });
 
