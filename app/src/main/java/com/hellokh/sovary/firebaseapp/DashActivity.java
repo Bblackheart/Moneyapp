@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -94,7 +93,7 @@ public class DashActivity extends AppCompatActivity {
         page2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(DashActivity.this , Page2.class);
+                Intent intent =new Intent(DashActivity.this , CalculateActivity.class);
                 startActivity(intent);
             }
         });
@@ -103,7 +102,7 @@ public class DashActivity extends AppCompatActivity {
         page3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(DashActivity.this , Page3.class);
+                Intent intent =new Intent(DashActivity.this , HistoryActivity.class);
                 startActivity(intent);
             }
         });
@@ -112,7 +111,7 @@ public class DashActivity extends AppCompatActivity {
         page4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(DashActivity.this , Page4.class);
+                Intent intent =new Intent(DashActivity.this , UserProfileActivity.class);
                 startActivity(intent);
             }
         });
@@ -122,15 +121,6 @@ public class DashActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(DashActivity.this , DashActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button login = findViewById(R.id.login_btn);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent =new Intent(DashActivity.this ,MainActivity.class);
                 startActivity(intent);
             }
         });

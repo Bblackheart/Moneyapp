@@ -76,7 +76,7 @@ public class ExpensesActivity extends AppCompatActivity {
 
         InsertExp insertExp = new InsertExp(expenses);
         reff.push().setValue(insertExp);
-        Toast.makeText(ExpensesActivity.this, "Data inserted", Toast.LENGTH_LONG).show();
+        Toast.makeText(ExpensesActivity.this, "Information inserted", Toast.LENGTH_LONG).show();
     }
 
     private void updateText(String strToAdd){

@@ -10,19 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Firebaseapp">
         <activity
+            android:name=".HistoryActivity"
+            android:exported="true" />
+        <activity
             android:name=".RevenueActivity"
             android:exported="true" />
         <activity
             android:name=".ExpensesActivity"
             android:exported="true" />
         <activity
-            android:name=".Page4"
-            android:exported="true" />
-        <activity
-            android:name=".Page3"
-            android:exported="true" />
-        <activity
-            android:name=".Page2"
+            android:name=".CalculateActivity"
             android:exported="true" />
         <activity
             android:name=".UserProfileActivity"
@@ -42,10 +39,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".DashActivity">
-        </activity>
+            android:name=".DashActivity"
+            android:exported="true"
+            />
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@ package com.hellokh.sovary.firebaseapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,9 +24,8 @@ public class UserProfileActivity extends AppCompatActivity {
     private TextView textViewWelcome, textViewUsername, textViewEmail;
     private ProgressBar progressBar;
     private String username, email;
-    private ImageView imageView;
     private FirebaseAuth authProfile;
-    private Button button;
+    private Button logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,17 @@ public class UserProfileActivity extends AppCompatActivity {
         textViewUsername = findViewById(R.id.textView_show_username);
         textViewEmail = findViewById(R.id.textView_show_email);
         progressBar = findViewById(R.id.progressBar);
+
+        logout = (Button)findViewById(R.id.logout_btn);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                authProfile.signOut();
+                finish();
+                startActivity(new Intent(UserProfileActivity.this, MainActivity.class));
+                Toast.makeText(UserProfileActivity.this, "You have logged out", Toast.LENGTH_LONG).show();
+            }
+        });
 
         authProfile = FirebaseAuth.getInstance();
         FirebaseUser firebaseUser = authProfile.getCurrentUser();

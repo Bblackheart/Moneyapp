@@ -75,7 +75,7 @@ public class RevenueActivity extends AppCompatActivity {
 
         InsertRev insertRev = new InsertRev(revenue);
         reff.push().setValue(insertRev);
-        Toast.makeText(RevenueActivity.this, "Data inserted", Toast.LENGTH_LONG).show();
+        Toast.makeText(RevenueActivity.this, "Information inserted", Toast.LENGTH_LONG).show();
     }
 
 
